@@ -66,14 +66,5 @@ int main(int argc, char* argv[]){
 	printf("%s finished!\n", i);
 
 
-
-
-
-
-
-
-
-
-
 	return 0;
 }
