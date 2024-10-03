@@ -63,7 +63,7 @@ int main() {
     printf("%s\n", "memory wiped");
 
     VirtualFree(decrypted_payload, 0, MEM_RELEASE);
-    printf("%s\n", "memory freed")
+    printf("%s\n", "memory freed");
 
     return 0;
 }
