@@ -8,3 +8,7 @@ driveByCompromise.html - a very simple website html which just downloads a file 
 compare_hash.sh - simple script which takes two files and compares the hashes. written for macos.
 
 The_C_Programming_Language_(2nd_Edition_Ritchie_Kernighan).pdf - pdf of the book "The C Programming Language".
+
+jitDecryption.c - just in time decryption. XOR encoded payload. The payload is only decrypted when needed.
+
+jitDecryption.exe - compiled jitDecryption.c. 
