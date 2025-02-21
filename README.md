@@ -1,14 +1,4 @@
 # random
+this is a repository full of random stuff. you may find anything from malware to cat pictures. I am not responsible if anyone uses anything in this repository for malicious purposes or does any harm. it'd be smart to just assume anything in this repo has malware. calc.exe? that's a malware that pops a calc and connects to c2 exfiltrating all the sensitive information from your device. filedata (28) 1? that's ransomware. K&R pdf? it has a wiper embedded in it. 
 
-
-calc.exe - just a windows calculator. now it is reachable from the internet :)
-
-driveByCompromise.html - a very simple website html which just downloads a file specified upon visiting the page without any user interaction.
-
-compare_hash.sh - simple script which takes two files and compares the hashes. written for macos.
-
-The_C_Programming_Language_(2nd_Edition_Ritchie_Kernighan).pdf - pdf of the book "The C Programming Language".
-
-jitDecryption.c - just in time decryption. XOR encoded payload. The payload is only decrypted when needed.
-
-jitDecryption.exe - compiled jitDecryption.c. 
+I am not liable for anything in this repo.
